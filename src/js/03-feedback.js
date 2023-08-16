@@ -26,10 +26,17 @@ onPageLoad();
 
 refs.form.addEventListener('submit', onFormSubmit);
 
+
 function onFormSubmit(event) {
   event.preventDefault();
+  if(refs.form.elements.email.value === "" || refs.form.elements.message.value === "") {
+    console.log("please fill inputs");
+    return
+  } else {
   console.log(obj);
   obj = {};
   event.target.reset();
   localStorage.removeItem('feedback-form-state');
+  }
 };
+
