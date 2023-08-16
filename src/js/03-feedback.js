@@ -29,13 +29,10 @@ refs.form.addEventListener('submit', onFormSubmit);
 
 function onFormSubmit(event) {
   event.preventDefault();
-  if(!refs.form.elements.email.value  || !refs.form.elements.message.value ) {
-    return
-  } else {
+  if(!refs.form.elements.email.value  || !refs.form.elements.message.value ) return
   console.log(obj);
   obj = {};
   event.target.reset();
   localStorage.removeItem('feedback-form-state');
-  }
 };
 
