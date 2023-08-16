@@ -29,8 +29,8 @@ refs.form.addEventListener('submit', onFormSubmit);
 
 function onFormSubmit(event) {
   event.preventDefault();
-  if(refs.form.elements.email.value === "" || refs.form.elements.message.value === "") {
-    console.log("please fill inputs");
+  if(!refs.form.elements.email.value  || !refs.form.elements.message.value ) {
+    console.log("error");
     return
   } else {
   console.log(obj);
